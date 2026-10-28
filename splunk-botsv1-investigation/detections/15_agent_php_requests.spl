@@ -1,0 +1,2 @@
+index=botsv1 earliest=0 sourcetype=stream:http dest_ip="192.168.250.70" uri_path="/joomla/agent.php"
+| stats count by src_ip, http_method, status

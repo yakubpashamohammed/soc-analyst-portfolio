@@ -1,0 +1,4 @@
+index=botsv1 earliest=0 sourcetype=stream:http src_ip="40.80.148.42"
+| stats count by uri_path
+| sort - count
+| head 20

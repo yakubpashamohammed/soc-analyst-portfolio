@@ -1,0 +1,3 @@
+index=botsv1 earliest=0 sourcetype=stream:http dest_ip="192.168.250.70" uri_path="/joomla/agent.php"
+| stats count, min(_time) as first_seen, max(_time) as last_seen
+| convert ctime(first_seen) ctime(last_seen)

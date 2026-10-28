@@ -1,0 +1,2 @@
+index=botsv1 earliest=0 host=we1149srv "192.168.250.70"
+| stats count by sourcetype

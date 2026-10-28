@@ -1,0 +1,5 @@
+index=botsv1 earliest=0 sourcetype=stream:http dest_ip="192.168.250.70"
+http_user_agent="Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+| where isnull(src_ip)
+| rex field=_raw "\"src_ip\":\"(?<extracted_src_ip>[^\"]+)\""
+| table _time, extracted_src_ip

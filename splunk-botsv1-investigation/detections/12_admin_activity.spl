@@ -1,0 +1,4 @@
+index=botsv1 earliest=0 sourcetype=stream:http src_ip="40.80.148.42" dest_ip="192.168.250.70"
+uri_path="/joomla/administrator/*"
+| table _time, http_method, uri_path, status
+| sort _time

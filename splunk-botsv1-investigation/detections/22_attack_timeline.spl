@@ -1,0 +1,2 @@
+index=botsv1 earliest=0 sourcetype=stream:http dest_ip="192.168.250.70"
+| timechart span=5m count by src_ip

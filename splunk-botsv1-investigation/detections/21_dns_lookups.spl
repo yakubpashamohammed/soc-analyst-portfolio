@@ -1,0 +1,3 @@
+index=botsv1 earliest=0 sourcetype=stream:dns *jumpingcrab*
+| table _time, src_ip, dest_ip, query{}
+| sort _time

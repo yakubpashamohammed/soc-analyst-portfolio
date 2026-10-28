@@ -1,0 +1,9 @@
+index=botsv1 earliest=0 sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" host=we1149srv *3791.exe*
+| rex field=_raw "<EventID>(?<eid>\d+)</EventID>"
+| rex field=_raw "Name=['\"]Image['\"]>(?<img>[^<]+)<"
+| rex field=_raw "Name=['\"]ParentImage['\"]>(?<parent>[^<]+)<"
+| rex field=_raw "Name=['\"]CommandLine['\"]>(?<cmd>[^<]+)<"
+| rex field=_raw "MD5=(?<md5>[A-Fa-f0-9]{32})"
+| search eid=1
+| table _time, img, parent, cmd, md5
+| sort _time

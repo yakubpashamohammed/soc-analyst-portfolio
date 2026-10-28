@@ -1,0 +1,3 @@
+index=botsv1 earliest=0 sourcetype=fgt_utm srcip="192.168.250.70" dstip="23.22.63.114"
+| table _time, srcip, dstip, hostname, url
+| sort _time

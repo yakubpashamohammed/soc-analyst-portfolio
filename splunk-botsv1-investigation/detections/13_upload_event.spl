@@ -1,0 +1,3 @@
+index=botsv1 earliest=0 sourcetype=stream:http dest_ip="192.168.250.70"
+http_method=POST part_filename{}="*.exe"
+| table _time, dest_ip, site, http_user_agent, part_filename{}

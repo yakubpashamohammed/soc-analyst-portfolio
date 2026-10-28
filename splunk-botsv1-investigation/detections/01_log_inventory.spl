@@ -1,0 +1,3 @@
+index=botsv1 earliest=0
+| stats count by sourcetype
+| sort - count

@@ -1,0 +1,4 @@
+index=botsv1 earliest=0 sourcetype=stream:http src_ip="192.168.2.50" dest_ip="192.168.250.70"
+| stats count by http_user_agent, uri_path
+| sort - count
+| head 10
